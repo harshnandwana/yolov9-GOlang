@@ -110,6 +110,13 @@ func main() {
 	if err := initializeModel(); err != nil {
 		logger.Fatalf("Failed to initialize model: %v", err)
 	}
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/" {
+			http.NotFound(w, r)
+			return
+		}
+		http.ServeFile(w, r, "index.html") // Save the HTML artifact as index.html
+	})
 
 	http.HandleFunc("/detect", handleDetection)
 	logger.Info("Server starting on :8000")
