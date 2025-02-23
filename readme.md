@@ -4,7 +4,7 @@ This is a Go-based HTTP service that performs object detection using YOLOv8 with
 
 ## Prerequisites
 
-- Go 1.20 or higher
+- Go 1.24 or higher
 - ONNX Runtime shared libraries
 - YOLOv8 ONNX model
 - Git
@@ -24,8 +24,8 @@ This will create `yolov8n.onnx` in your current directory.
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone https://github.com/harshnandwana/yologoinference.git
+cd yologoinference
 ```
 
 2. Install Go dependencies:
@@ -64,6 +64,7 @@ cp yolov8n.onnx <project-directory>/
 ```
 .
 ├── main.go
+├── index.html
 ├── yolov8n.onnx
 ├── third_party/
 │   ├── onnxruntime.dll
