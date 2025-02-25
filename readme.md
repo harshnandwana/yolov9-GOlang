@@ -2,6 +2,13 @@
 
 This is a Go-based HTTP service that performs object detection using YOLOv8 with ONNX Runtime. The service accepts images via HTTP POST requests and returns detection results in JSON format.
 
+## Major Improvement
+
+This process has reduced the time of inference 
+for a batch of 10 images
+on python it was 1070 ms and from this method it was 214 ms (Marked on CPU Apple Macbook Pro M3 Pro)
+
+
 ## Prerequisites
 
 - Go 1.24 or higher
